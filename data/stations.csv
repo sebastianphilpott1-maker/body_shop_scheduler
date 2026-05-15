@@ -1,1 +1,10 @@
 station_id,name,qualification_required,operators_needed
+SUB-L,Subassembly Left,spot,1
+SUB-R,Subassembly Right,spot,1
+UND,Underbody,spot,2
+MAIN,Mainline Framing,spot,2
+CROSS,Cross-member Reinforcement,MIG,1
+TRAY,Tray Mount,MIG,1
+RESPOT,Respot Welding,spot,1
+FINISH,Metal Finish,fixturing,1
+INSP,Final Inspection,inspection,1

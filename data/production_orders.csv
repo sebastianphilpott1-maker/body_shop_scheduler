@@ -1,1 +1,7 @@
 order_id,variant_id,due_date,weight
+F001,SEDAN,240,1
+F002,SEDAN,300,1
+F003,SUV,280,2
+F004,SUV,360,2
+F005,UTE,260,1
+F006,UTE,380,1

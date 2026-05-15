@@ -1,1 +1,7 @@
 operator_id,name,qualifications
+OP01,Alice,spot;inspection
+OP02,Bob,spot;MIG
+OP03,Charlie,spot
+OP04,Dana,MIG;fixturing
+OP05,Erin,fixturing;inspection
+OP06,Frank,spot;MIG;fixturing
