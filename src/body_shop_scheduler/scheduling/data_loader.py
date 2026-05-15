@@ -13,6 +13,7 @@ from ..domain.entities import Station
 from ..domain.entities import Operator
 from ..domain.entities import RoutingStep
 from ..domain.entities import Variant
+from ..domain.entities import MaterialKit
 
 def _load_stations(path: Path) -> dict[str, Station]:
     stations: dict[str, Station] = {}
@@ -87,6 +88,21 @@ def _load_variants(variant_path: Path, routings_path: Path) -> dict[str, Variant
             )
     return variants
 
+def _load_material_kits(material_path: Path) -> dict[str, MaterialKit]:
+    material_kits: dict[str, MaterialKit] = {}
+    with open(material_path, newline = "") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            m = MaterialKit(
+                order_id        = row["order_id"],
+                planned_arrival = row["planned_arrival"],
+            )
+            material_kits[m.order_id] = m
+    return material_kits
+            
+            
+
+
 if __name__ == "__main__":
     from pathlib import Path
     data_dir = Path(__file__).parent.parent.parent.parent / "data"
@@ -100,3 +116,6 @@ if __name__ == "__main__":
     variants = _load_variants(data_dir / "variants.csv", data_dir / "routings.csv")
     for v in variants.values():
         print(v)
+    material_kits = _load_material_kits(data_dir / "material_kits.csv")
+    for m in material_kits.values():
+        print(m)
