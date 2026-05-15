@@ -1,0 +1,7 @@
+# Convenience file. Authoritative dependencies live in pyproject.toml.
+# Run `pip install -e ".[dev]"` for normal install.
+ortools>=9.0
+pandas>=2.0
+matplotlib>=3.5
+numpy>=1.20
+pytest>=7.0
