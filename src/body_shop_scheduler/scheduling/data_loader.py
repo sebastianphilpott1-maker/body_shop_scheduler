@@ -159,7 +159,7 @@ def load_scenario(data_dir: Path, horizon: int) -> Scenario:
 
 if __name__ == "__main__":
     data_dir = Path(__file__).parent.parent.parent.parent / "data"
-    scenario = load_scenario(data_dir, horizon=480)
+    scenario = load_scenario(data_dir, horizon = 480)
     print(f"Stations:  {len(scenario.stations)}")
     print(f"Operators: {len(scenario.operators)}")
     print(f"Variants:  {len(scenario.variants)}")
